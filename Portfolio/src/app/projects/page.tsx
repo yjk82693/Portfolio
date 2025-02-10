@@ -16,13 +16,13 @@ const projects = [
     name: 'Snake Game', 
     description: 'A modern twist on the classic Snake game, where players navigate a growing snake to eat food while avoiding collisions.', 
     githubLink: 'https://github.com/yjk82693/Portfolio/blob/main/my-portfolio/public/images/snake.jpg', 
-    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/my-portfolio/public/images/snake.jpg'
+    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/snake.jpg'
   },
   { 
     name: "Orca's Rush", 
     description: 'A Flappy Bird-inspired game with an Orca navigating underwater obstacles while collecting points.', 
     githubLink: 'https://github.com/yjk82693/Pygame/tree/main/OrcasRush', 
-    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/my-portfolio/public/images/orca.jpg'
+    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/orca.jpg'
   },
 ];
 

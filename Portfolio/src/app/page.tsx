@@ -22,7 +22,7 @@ const HomePage = () => (
         {/* Right Column: Profile Image */}
         <Col xs={24} md={10}>
           <Image
-            src="/Portfolio/images/logo.png" // Adjusted image path for GitHub Pages
+            src="https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/logo.png" // Adjusted image path for GitHub Pages
             alt="Yoojun Kim"
             width={400}         
             height={400}        
