@@ -6,10 +6,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "raw.githubusercontent.com",
-        pathname: "/yjk82693/Portfolio/main/my-portfolio/public/images/**",
       },
     ],
   },
+  trailingSlash: true, // Ensures correct routing for static exports
 };
 
 export default nextConfig;
