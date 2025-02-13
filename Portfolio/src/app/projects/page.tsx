@@ -10,7 +10,7 @@ const projects = [
     name: 'Tetris', 
     description: 'A classic Tetris game built with Pygame, featuring block rotation, line clearing, and increasing difficulty.', 
     githubLink: 'https://github.com/yjk82693/Portfolio/blob/main/my-portfolio/public/images/tetris.jpg', 
-    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/my-portfolio/public/images/tetris.jpg'
+    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/tetris.jpg'
   },
   { 
     name: 'Snake Game', 
