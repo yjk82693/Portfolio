@@ -1,82 +1,99 @@
-'use client';
+"use client";
+
 import React from 'react';
+import Image from 'next/image';
+import { Card, Button } from 'antd';
+import ClientLayout from '../components/ClientLayout';
+
+const { Meta } = Card;
 
 const projects = [
   {
     name: 'Tetris',
     description:
       'A classic Tetris game built with Pygame, featuring block rotation, line clearing, and increasing difficulty.',
-    githubLink: 'https://github.com/yjk82693/Pygame/blob/main/Tetris/Tetris.py',
-    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/tetris.jpg',
+    githubLink:
+      'https://github.com/yjk82693/Pygame/blob/main/Tetris/Tetris.py',
+    image:
+      'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/tetris.jpg',
   },
   {
     name: 'Snake Game',
     description:
       'A modern twist on the classic Snake game, where players navigate a growing snake to eat food while avoiding collisions.',
-    githubLink: 'https://github.com/yjk82693/Pygame/blob/main/Snake/snake.py',
-    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/snake.jpg',
+    githubLink:
+      'https://github.com/yjk82693/Pygame/blob/main/Snake/Snake.py',
+    image:
+      'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/snake.jpg',
   },
   {
     name: "Orca's Rush",
     description:
       'A Flappy Bird-inspired game with an Orca navigating underwater obstacles while collecting points.',
-    githubLink: 'https://github.com/yjk82693/Pygame/blob/main/Orca/orca.py',
-    image: 'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/orca.jpg',
+    githubLink:
+      'https://github.com/yjk82693/Pygame/blob/main/OrcasRush/OrcaRush.py',
+    image:
+      'https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/orca.jpg',
   },
 ];
 
-const ProjectsSection = () => {
+const ProjectsPage = () => {
   return (
-    <section style={{ padding: '80px 20px', backgroundColor: '#f9f9f9' }}>
-      <h2 style={{ textAlign: 'center', fontSize: '36px', marginBottom: '40px' }}>My Projects</h2>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap' }}>
-        {projects.map((project) => (
-          <div
-            key={project.name}
-            style={{
-              backgroundColor: '#fff',
-              padding: '20px',
-              borderRadius: '16px',
-              maxWidth: '300px',
-              boxShadow: '0 6px 20px rgba(0,0,0,0.1)',
-              textAlign: 'center',
-            }}
-          >
-            <img
-              src={project.image}
-              alt={project.name}
+    <ClientLayout>
+      <div style={{ padding: '40px 20px' }}>
+        <h1 style={{ fontSize: '36px', textAlign: 'center', marginBottom: '40px' }}>
+          My Projects
+        </h1>
+
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '24px',
+            justifyContent: 'center',
+          }}
+        >
+          {projects.map((project, idx) => (
+            <Card
+              key={idx}
               style={{
-                width: '100%',
-                height: '200px',
-                objectFit: 'cover',
-                borderRadius: '8px',
-                marginBottom: '16px',
+                width: 300,
+                borderRadius: '10px',
+                overflow: 'hidden',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
               }}
-            />
-            <h3 style={{ fontSize: '22px', fontWeight: '600' }}>{project.name}</h3>
-            <p style={{ fontSize: '16px', color: '#666', margin: '12px 0' }}>{project.description}</p>
-            <a
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-block',
-                marginTop: '10px',
-                padding: '10px 20px',
-                backgroundColor: '#007bff',
-                color: '#fff',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                fontWeight: '500',
-              }}
+              hoverable={false}
+              cover={
+                <div style={{ position: 'relative', height: '180px' }}>
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    layout="fill"
+                    objectFit="cover"
+                    unoptimized
+                    style={{ pointerEvents: 'none', userSelect: 'none' }}
+                  />
+                </div>
+              }
             >
-              View on GitHub
-            </a>
-          </div>
-        ))}
+              <Meta
+                title={project.name}
+                description={<p style={{ marginBottom: '16px' }}>{project.description}</p>}
+              />
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'block', marginTop: '16px', textAlign: 'center' }}
+              >
+                <Button type="primary">View on GitHub</Button>
+              </a>
+            </Card>
+          ))}
+        </div>
       </div>
-    </section>
+    </ClientLayout>
   );
 };
 
-export default ProjectsSection;
+export default ProjectsPage;
