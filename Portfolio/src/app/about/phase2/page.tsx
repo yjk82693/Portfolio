@@ -23,7 +23,7 @@ const Phase2 = () => {
         {/* Image at the top */}
         <div style={{ marginBottom: '20px' }}>
           <Image
-            src="https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images"
+            src="/images/phase2.jpg"
             alt="Phase 2: High School Life"
             width={1000} // Adjust width as needed
             height={400} // Adjust height as needed

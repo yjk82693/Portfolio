@@ -23,7 +23,7 @@ const Phase1 = () => {
         {/* Image at the top */}
         <div style={{ marginBottom: '20px' }}>
           <Image
-            src="https://raw.githubusercontent.com/yjk82693/Portfolio/main/Portfolio/public/images/phase1.jpg"
+            src="/images/phase1.jpg"
             alt="Phase 1: Elementary Years"
             width={1000} // Provide appropriate width
             height={400} // Provide appropriate height
